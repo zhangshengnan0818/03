@@ -56,3 +56,13 @@ $(function(){
     }
   });
 });
+
+/*当键盘弹起时，底部"提交订单"一栏使用的是fixed定位，会被键盘顶起*/
+var h=$(window).height();
+$(window).resize(function(){
+  if($(window).height()<h){
+    $('.footer').hide();
+  }else{
+    $('.footer').show();
+  }
+});
