@@ -37,14 +37,14 @@
     <!--表单，提交数据给后台-->
     <form id="order" action="#" method="post" hidden></form>
     <!--1***订单-->
-    <div class="mainTop row">
-      <div class="col-xs-6">
+    <div class="mainTop">
+      <div class="mainlf">
         <label for="oId">单号:</label>
-        <input type="text" id="oId" value="20180828"/>
+        <span id="oId">Y1804010</span>
       </div>
-      <div class="col-xs-6">
+      <div class="mainrt">
         <label for="oDate">下单日期:</label>
-        <input type="text" id="oDate" value="Y18040101"/>
+        <span id="oDate">20180828</span>
       </div>
     </div>
     <!--2***客户信息-->
@@ -57,7 +57,7 @@
         <label for="logistics">物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;流</label>
         <select name="logi" id="logistics">
           <option value="篮球">篮球</option>
-          <option value="皮球">皮球</option>
+          <option value="韵达物流" selected>韵达物流</option>
           <option value="羽毛球">羽毛球</option>
           <option value="篮球">篮球</option>
           <option value="皮球">皮球</option>
@@ -71,15 +71,8 @@
           <option value="篮球">篮球</option>
           <option value="皮球">皮球</option>
           <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
         </select>
-        <!--<input type="text" id="logistics" list="logiList" value="韵达物流"/>-->
-        <!--<datalist id="logiList">
-          <option value="韵达物流1">韵达物流1</option>
-          <option value="圆通物流2">圆通物流2</option>
-          <option value="韵达物流3">韵达物流3</option>
-          <option value="韵达物流4">韵达物流4</option>
-          <option value="韵达物流5">韵达物流5</option>
-        </datalist>-->
       </div>
       <div class="col-xs-12">
         <label for="user">终端用户</label>
@@ -87,19 +80,53 @@
       </div>
       <div class="col-xs-6">
         <label for="hand">拉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手</label>
-        <input type="text" id="hand" placeholder="韵达物流"/>
+        <input type="text" id="hand" placeholder=""/>
       </div>
       <div class="col-xs-6">
         <label for="door">门&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;板</label>
-        <input type="text" id="door" placeholder="韵达物流"/>
+        <input type="text" id="door" placeholder=""/>
       </div>
       <div class="col-xs-6">
-        <label for=backd">背&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;板</label>
-        <input type="text" id=backd" placeholder="韵达物流"/>
+        <label for="backd">背&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;板</label>
+        <select name="logi" id="backd">
+          <option value="篮球">篮球</option>
+          <option value="韵达物流" selected>韵达物流</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+        </select>
       </div>
       <div class="col-xs-6">
         <label for="line">封&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;边</label>
-        <input type="text" id="line" placeholder="韵达物流"/>
+        <select name="logi" id="line">
+          <option value="篮球">篮球</option>
+          <option value="韵达物流" selected>韵达物流</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+          <option value="篮球">篮球</option>
+        </select>
       </div>
       <div class="col-xs-12">
         <label for="tips">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</label>
@@ -110,7 +137,7 @@
     <!--3.1***导航栏-->
     <div class="addSize">
       <p>
-        <a href="">新增尺寸</a>
+        <a href="javascript:;">新增尺寸</a>
       </p>
 
       <div class="addIcon">
@@ -125,7 +152,9 @@
           <a href="#">
             <label for="tname">名称：</label>
             <span class="bg1"></span>
-            <input type="text" value="碳钢浅金色M6" id="tname" disabled/>
+            <span id="tname">碳钢浅金色M6</span>
+            <!--<input type="text" value="碳钢浅金色M6" id="tname" disabled/>-->
+
           </a>
         </p>
       </div>
@@ -133,7 +162,7 @@
         <p>
           <a href="#">
             <label for="theight">高度：</label>
-            <input placeholder="610" onkeyup="clearNoNum(this)" id="theight"/>
+            <input type="number" placeholder="610" onkeyup="clearNoNum(this)" id="theight"/>
           </a>
         </p>
       </div>
@@ -141,7 +170,7 @@
         <p>
           <a href="#">
             <label for="twidth">宽度：</label>
-            <input placeholder="298" onkeyup="clearNoNum(this)" id="twidth"/>
+            <input type="number" placeholder="298" onkeyup="clearNoNum(this)" id="twidth"/>
           </a>
         </p>
       </div>
@@ -149,7 +178,7 @@
         <p>
           <a href="#">
             <label for="tleft">左开：</label>
-            <input placeholder="必填" onkeyup="clearNoNum(this)" required id="tleft"/>
+            <input type="number" placeholder="必填" onkeyup="clearNoNum(this)" required id="tleft"/>
           </a>
         </p>
       </div>
@@ -157,7 +186,7 @@
         <p>
           <a href="#">
             <label for="tright">右开：</label>
-            <input placeholder="必填" onkeyup="clearNoNum(this)" required id="tright"/>
+            <input type="number" placeholder="必填" onkeyup="clearNoNum(this)" required id="tright"/>
           </a>
         </p>
       </div>
@@ -165,7 +194,7 @@
         <p>
           <a href="#">
             <label for="tblock">块开：</label>
-            <input placeholder="必填" onkeyup="clearNoNum(this)" required id="tblock"/>
+            <input type="number" placeholder="必填" onkeyup="clearNoNum(this)" required id="tblock"/>
           </a>
         </p>
       </div>
@@ -194,8 +223,7 @@
 
       </div>
     </div>
-
-    <!--4***-->
+    <!--4***menu-->
     <div class="menu_container">
       <ul>
         <li>

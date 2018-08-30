@@ -23,4 +23,4 @@
   width: 100%;
   background-color: transparent;
 }
-(node:10880) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:12228) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

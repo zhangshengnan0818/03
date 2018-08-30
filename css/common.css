@@ -229,17 +229,23 @@ p.nav2 + .main {
   height: 2.068rem;
   line-height: 2.068rem;
 }
+.mainTop div {
+  display: inline-block;
+}
 .mainTop div:first-child {
+  float: left;
   text-align: left;
+  margin-left: 0.719rem;
 }
 .mainTop div:last-child {
+  float: right;
   text-align: right;
+  margin-right: 0.906rem;
 }
 .mainTop div label {
   display: inline-block;
 }
-.mainTop div input {
-  width: 5rem;
+.mainTop div span {
   color: #fd3b56;
 }
 /*2***客户信息*/
@@ -266,6 +272,7 @@ p.nav2 + .main {
   border-radius: 0.25rem;
   border: solid 1px #d9d9d9;
   padding: 0 0.344rem;
+  color: #999;
 }
 .userMes div input.line1 {
   width: 80.5%;
@@ -354,6 +361,7 @@ p.nav2 + .main {
   float: right;
   position: static;
   margin-left: 1.094rem;
+  color: #999;
 }
 .info2 {
   height: auto;
@@ -414,10 +422,11 @@ span.bg1 {
 }
 .menu_container .menu_title input {
   position: absolute;
-  width: 1.5rem;
+  width: 3rem;
   font-size: 0.723rem;
   color: #999999;
   right: 2.313rem;
+  text-align: right;
 }
 .menu_container .menu_title span {
   float: right;
@@ -435,4 +444,4 @@ span.bg1 {
   height: 1.6rem;
   line-height: 1.6rem;
 }
-(node:5608) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:14296) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

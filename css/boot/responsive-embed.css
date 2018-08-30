@@ -24,4 +24,4 @@
 .embed-responsive-4by3 {
   padding-bottom: 75%;
 }
-(node:15608) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:3956) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

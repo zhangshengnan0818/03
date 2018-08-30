@@ -69,4 +69,4 @@
     border: 1px solid #ddd !important;
   }
 }
-(node:10292) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:16452) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

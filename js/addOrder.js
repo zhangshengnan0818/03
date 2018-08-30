@@ -1,11 +1,12 @@
 /**
  * Created by Amh on 2018-08-29.
  */
-$('.addIcon').on('click',function(){
-  $this=$(this);
-  $this .toggleClass('active');
-
-  if($this.hasClass('active')){
+/*点击添加尺寸*/
+$('.addSize').on('click','a',function(){
+  //console.log('1');
+  $icon=$('.addIcon');
+  $icon .toggleClass('active');
+  if($icon.hasClass('active')){
     $('.sizeMes').slideDown(500);
   }else{
     $('.sizeMes').slideUp(500);
@@ -62,7 +63,9 @@ var h=$(window).height();
 $(window).resize(function(){
   if($(window).height()<h){
     $('.footer').hide();
+    $('.header').hide();
   }else{
     $('.footer').show();
+    $('.header').show();
   }
 });
