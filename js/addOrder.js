@@ -12,6 +12,10 @@ $('.addSize').on('click','a',function(){
     $('.sizeMes').slideUp(500);
   }
 });
+$('.sizeMes .cancel,.sizeMes .ok').on('click',function(){
+  $('.addIcon').removeClass('active');
+  $('.sizeMes').slideUp(500);
+});
 /*输入数字保留2位*/
 function clearNoNum(obj){
   obj.value = obj.value.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符

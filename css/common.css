@@ -313,7 +313,6 @@ p.nav2 + .main {
   height: 1.188rem;
   border: 1px solid #333;
   border-radius: 50%;
-  z-index: 10;
 }
 .addSize div.addIcon div {
   position: absolute;
@@ -324,12 +323,12 @@ p.nav2 + .main {
 .addSize div.addIcon .w {
   width: 0.7rem;
   border-top: 1px solid #333;
-  top: 49%;
-  left: 16%;
+  top: 46%;
+  left: 18%;
 }
 .addSize div.addIcon .h {
-  left: 49%;
-  top: 16%;
+  left: 46%;
+  top: 18%;
   height: 0.7rem;
   border-left: 1px solid #333;
 }
@@ -444,4 +443,4 @@ span.bg1 {
   height: 1.6rem;
   line-height: 1.6rem;
 }
-(node:14296) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:5784) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
