@@ -232,8 +232,13 @@ p.nav2 + .main {
 .main {
   margin-top: @head;
   margin-bottom: @foot;
+  position: absolute;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
-
+.main .container{
+  height: 500px;
+}
 .mainTop {
   font-size: 0.938rem;
   height: 2.068rem;
@@ -369,6 +374,7 @@ p.nav2 + .main {
     width: 6.406rem;
     text-align: right;
     color: #999;
+    font-size: 1rem;
   }
   span{
     float: right;

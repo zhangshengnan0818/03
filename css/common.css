@@ -223,6 +223,12 @@ p.nav2 + .main {
 .main {
   margin-top: 2.968rem;
   margin-bottom: 3.5rem;
+  position: absolute;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.main .container {
+  height: 500px;
 }
 .mainTop {
   font-size: 0.938rem;
@@ -355,6 +361,7 @@ p.nav2 + .main {
   width: 6.406rem;
   text-align: right;
   color: #999;
+  font-size: 1rem;
 }
 .info span {
   float: right;
@@ -443,4 +450,4 @@ span.bg1 {
   height: 1.6rem;
   line-height: 1.6rem;
 }
-(node:5784) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:13680) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

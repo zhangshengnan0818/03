@@ -62,14 +62,15 @@ $(function(){
   });
 });
 
-/*当键盘弹起时，底部"提交订单"一栏使用的是fixed定位，会被键盘顶起*/
+/*当键盘弹起时，底部"提交订单"一栏使用的是fixed bottom定位，会被键盘顶起*/
 var h=$(window).height();
 $(window).resize(function(){
+  if(document.activeElement.tagName === 'INPUT'){
+    document.activeElement.scrollIntoView({behavior: "smooth"})
+  }
   if($(window).height()<h){
     $('.footer').hide();
-    $('.header').hide();
   }else{
     $('.footer').show();
-    $('.header').show();
   }
 });
