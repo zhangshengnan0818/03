@@ -1,0 +1,27 @@
+@hc:#f5f5f5;//li :hover
+@menuW:50%;
+.dropdowm-menu{
+  width: @menuW;
+  border: solid 1px #d9d9d9;
+  background-color: #ffffff;
+  li{
+    display: block;
+    white-space: pre;
+    height: 1.813rem;
+    line-height: 1.813rem;
+    padding:0.469rem 0.406rem;
+    border-bottom: solid 1px #d9d9d9;
+    font-size: 0.875rem;
+    &:last-child{
+      border: none;
+    }
+    &:hover{
+      background-color: @hc;
+    }
+    a{
+      display: inline-block;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+}

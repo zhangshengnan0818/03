@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="format-detection" content="telphone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="apple-mobile-app-capable" content="yes">
+  <meta name="apple-mobile-app-status-bar-style" content="black">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="320">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/boot/bootstrap.css"/>
+  <link rel="stylesheet" href="css/common.css"/>
+  <title>新增订单</title>
+</head>
+<body>
+<div class="header">
+  <div class="container">
+    <div class="headTop">
+      <p>
+        <span class="back"></span>
+        <a href="#">新增订单</a>
+        <b><input type="submit" value="保存" form="order" id="saveOrder"/></b>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="main">
+  <div class="container">
+    <!--表单，提交数据给后台-->
+    <form id="order" action="#" method="post" hidden></form>
+    <!--1***订单-->
+    <div class="mainTop row">
+      <div class="col-xs-6">
+        <label for="oId">单号:</label>
+        <input type="text" id="oId" value="20180828"/>
+      </div>
+      <div class="col-xs-6">
+        <label for="oDate">下单日期:</label>
+        <input type="text" id="oDate" value="Y18040101"/>
+      </div>
+    </div>
+    <!--2***客户信息-->
+    <div class="userMes row">
+      <div class="col-xs-6">
+        <label for="uname">客户名称</label>
+        <input type="text" id="uname" placeholder="客户名称"/>
+      </div>
+      <div class="col-xs-6">
+        <label for="logistics">物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;流</label>
+        <select name="logi" id="logistics">
+          <option value="篮球">篮球</option>
+          <option value="皮球">皮球</option>
+          <option value="羽毛球">羽毛球</option>
+        </select>
+        <!--<input type="text" id="logistics" list="logiList" value="韵达物流"/>-->
+        <!--<datalist id="logiList">
+          <option value="韵达物流1">韵达物流1</option>
+          <option value="圆通物流2">圆通物流2</option>
+          <option value="韵达物流3">韵达物流3</option>
+          <option value="韵达物流4">韵达物流4</option>
+          <option value="韵达物流5">韵达物流5</option>
+        </datalist>-->
+      </div>
+      <div class="col-xs-12">
+        <label for="user">终端用户</label>
+        <input type="text" id="user" placeholder="恒美橱柜" class="line1"/>
+      </div>
+      <div class="col-xs-6">
+        <label for="hand">拉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手</label>
+        <input type="text" id="hand" placeholder="韵达物流"/>
+      </div>
+      <div class="col-xs-6">
+        <label for="door">门&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;板</label>
+        <input type="text" id="door" placeholder="韵达物流"/>
+      </div>
+      <div class="col-xs-6">
+        <label for=backd">背&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;板</label>
+        <input type="text" id=backd" placeholder="韵达物流"/>
+      </div>
+      <div class="col-xs-6">
+        <label for="line">封&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;边</label>
+        <input type="text" id="line" placeholder="韵达物流"/>
+      </div>
+      <div class="col-xs-12">
+        <label for="tips">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</label>
+        <textarea name="tips" id="tips" rows="4"></textarea>
+      </div>
+    </div>
+    <!--3***尺寸-->
+    <!--3.1***导航栏-->
+    <div class="addSize">
+      <p>
+        <a href="">新增尺寸</a>
+      </p>
+
+      <div class="addIcon">
+        <div class="w"></div>
+        <div class="h"></div>
+      </div>
+    </div>
+    <!--3.2***主题内容栏-->
+    <div class="sizeMes">
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="tname">名称：</label>
+            <span class="bg1"></span>
+            <input type="text" value="碳钢浅金色M6" id="tname" disabled/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="theight">高度：</label>
+            <input placeholder="610" onkeyup="clearNoNum(this)" id="theight"/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="twidth">宽度：</label>
+            <input placeholder="298" onkeyup="clearNoNum(this)" id="twidth"/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="tleft">左开：</label>
+            <input placeholder="必填" onkeyup="clearNoNum(this)" required id="tleft"/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="tright">右开：</label>
+            <input placeholder="必填" onkeyup="clearNoNum(this)" required id="tright"/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="tblock">块开：</label>
+            <input placeholder="必填" onkeyup="clearNoNum(this)" required id="tblock"/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="ttype">类型：</label>
+            <span class="bg1"></span>
+            <input type="text" value="门板" id="ttype" disabled/>
+          </a>
+        </p>
+      </div>
+      <div class="info">
+        <p>
+          <a href="#">
+            <label for="ttips">备注：</label>
+            <input placeholder="非必填" onkeyup="clearNoNum(this)" required id="ttips"/>
+          </a>
+        </p>
+      </div>
+      <div class="info2">
+        <div class="btn">
+          <a href="#" class="cancel">取消</a>
+          <a href="#" class="ok">确定</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!--4***-->
+    <div class="menu_container">
+      <ul>
+        <li>
+          <div class="menu_title">
+            <b>1</b>
+            <i>碳钢浅金色M6</i>
+            <input type="text" value="明细" disabled/>
+            <span class="bg1"></span>
+          </div>
+          <div class="menu_content row">
+            <div class="col-xs-6">高度：<span>610</span></div>
+            <div class="col-xs-6">宽度：<span>298</span></div>
+            <div class="col-xs-6">左开：<span>1</span></div>
+            <div class="col-xs-6">右开：<span>2</span></div>
+            <div class="col-xs-6">块数：<span>2</span></div>
+            <div class="col-xs-6">类型：<span>门板</span></div>
+            <div class="col-xs-12">备注：<span></span></div>
+          </div>
+        </li>
+        <li>
+          <div class="menu_title">
+            <b>2</b>
+            <i>碳钢浅金色M6</i>
+            <input type="text" value="明细" disabled/>
+            <span class="bg1"></span>
+          </div>
+          <div class="menu_content row">
+            <div class="col-xs-6">高度：<span>610</span></div>
+            <div class="col-xs-6">宽度：<span>298</span></div>
+            <div class="col-xs-6">左开：<span>1</span></div>
+            <div class="col-xs-6">右开：<span>2</span></div>
+            <div class="col-xs-6">块数：<span>2</span></div>
+            <div class="col-xs-6">类型：<span>门板</span></div>
+            <div class="col-xs-12">备注：<span></span></div>
+          </div>
+        </li>
+        <li>
+          <div class="menu_title">
+            <b>3</b>
+            <i>碳钢浅金色M6</i>
+            <input type="text" value="明细" disabled/>
+            <span class="bg1"></span>
+          </div>
+          <div class="menu_content row">
+            <div class="col-xs-6">高度：<span>610</span></div>
+            <div class="col-xs-6">宽度：<span>298</span></div>
+            <div class="col-xs-6">左开：<span>1</span></div>
+            <div class="col-xs-6">右开：<span>2</span></div>
+            <div class="col-xs-6">块数：<span>2</span></div>
+            <div class="col-xs-6">类型：<span>门板</span></div>
+            <div class="col-xs-12">备注：<span></span></div>
+          </div>
+        </li>
+
+      </ul>
+  </div>
+
+
+</div>
+
+<div class="footer">
+  <div class="container">
+    <input type="submit" id="btn" form="order" value="提交表单"/>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/addOrder.js"></script>
+</body>
+</html>
