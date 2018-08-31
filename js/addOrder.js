@@ -47,6 +47,20 @@ function checkSubmitRequired(){
 }*/
 
 /*当键盘弹起时，底部"提交订单"一栏使用的是fixed bottom定位，会被键盘顶起*/
+$('input').bind('focus',function(){
+  $('.footer').css('position','static');
+  //或者$('#viewport').height($(window).height()+'px');
+}).bind('blur',function(){
+  $('.footer').css({'position':'fixed','bottom':'0'});
+  //或者$('#viewport').height('auto');
+});
+var u = navigator.userAgent, app = navigator.appVersion;
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+if (isiOS) {
+  window.setTimeout(function(){
+    window.scrollTo(0,document.body.clientHeight);
+  }, 500);
+}
 /*var h=$(window).height();
 $(window).resize(function(){
   if($(window).height()<h){
@@ -61,9 +75,9 @@ $(window).resize(function(){
   }
 
 });*/
-$(document).ready(function () {
+/*$(document).ready(function () {//不能自动跳转可视窗口
   $('body').height($('body')[0].clientHeight);
-});
+});*/
 
 /*手风琴效果 */
 $(".menu_title").click(function(){
