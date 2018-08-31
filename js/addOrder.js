@@ -47,7 +47,7 @@ function checkSubmitRequired(){
 }*/
 
 /*当键盘弹起时，底部"提交订单"一栏使用的是fixed bottom定位，会被键盘顶起*/
-var h=$(window).height();
+/*var h=$(window).height();
 $(window).resize(function(){
   if($(window).height()<h){
     $('.footer').hide();
@@ -60,8 +60,10 @@ $(window).resize(function(){
     }, 100)
   }
 
+});*/
+$(document).ready(function () {
+  $('body').height($('body')[0].clientHeight);
 });
-
 
 /*手风琴效果 */
 $(".menu_title").click(function(){
