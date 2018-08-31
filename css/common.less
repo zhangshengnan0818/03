@@ -53,13 +53,13 @@ i {
   font-style: normal;
 }
 ::-webkit-input-placeholder{
-  color: #999;
+  color: @phc;
 }
 ::-moz-placeholder {
-  color: #999;
+  color: @phc;
 }
 :-ms-input-placeholder {
-  color: #999;
+  color: @phc;
 }
 /*页面尺寸*/
 body {
@@ -79,24 +79,6 @@ body {
   }
 }
 
-/*@media screen and (min-width: 321px) and (max-width: 375px){
-  html{
-    font-size: 13px !important;
-  }
-  body {
-    background-color: #f5f5f5;//背景色
-    font-size: 13px !important;
-  }
-}
-@media screen and (min-width: 376px) and (max-width: 420px){
-  html{
-    font-size: 15px !important;
-  }
-  body {
-    background-color: #f5f5f5;//背景色
-    font-size: 15px !important;
-  }
-}*/
 .container {
   text-align: center;
   margin: 0 auto;
@@ -122,10 +104,12 @@ p {
 
 @head: 2.968rem;
 @foot: 3.5rem;
-@nav2: 80/2px;
-@blue: #084ba7;
+@nav2: 3rem;
+@blue-dark: #084ba7;
+@blue:#156de4;
 @blue-light: #448ef2;
 @red: #fd3b56;
+@phc:#d3d2d2;
 .header, .footer, .main {
   width: 100%;
 }
@@ -141,7 +125,7 @@ p {
   height: @head;
   top: 0;
   font-size: 1.125rem;
-  background-color: @blue;
+  background-color: @blue-dark;
   color: #fff;
   .headTop {
     p {
@@ -160,7 +144,7 @@ p {
         top: 0;
         input {
           height: @head;
-          background-color: @blue;
+          background-color: @blue-dark;
         }
       }
       a {
@@ -174,41 +158,62 @@ p {
 }
 
 /*二级头部固定*/
-/*p.nav2 {
+div.nav2 {
   position: fixed;
   top: @head;
   width: 100%;
   height: @nav2;
   line-height: @nav2;
-  margin-bottom: @nav2;
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  font-size: 0.833rem;
-  text-align: center;
+  background-color: @blue-dark;
+  font-size: 1.063rem;
+  text-align: left;
   z-index: 999;
-
-  a {
-    width: 100%;
-    display: block;
+  input{
+    height: 2rem;
+    line-height: 2rem;
   }
-  span {
-    width: 16/2px;
-    height: 32/2px;
-    background: url("../img/返回@2x.png") 0 0 no-repeat;
-    background-size: 16/2px 32/2px;
-    top: 12px;
-    left: 12px;
-  }
-  b {
-    position: absolute;
-    top: 0;
-    right: 15px;
+  div.search{
+    position: relative;
     display: inline-block;
+    line-height: 0;
+    margin-left: 2.156rem;
+    width: 70%;
+    input#kw{
+      background-color: #fff;
+      width: 100%;
+      border-radius: 1rem;
+      border: solid 1px #5394ec;
+      padding-left: 2.781rem;
+      font-size: 0.875rem;
+    }
+    span{
+      position: absolute;
+    }
+    .searchIcon{
+      width: 1.125rem;
+      height: 1.125rem;
+      background: url("../img/surch@2x.png") 0 0 no-repeat;
+      background-size: 1.125rem 1.125rem;
+      left: 0.844rem;
+      bottom: 0.438rem;
+    }
+    .cltIcon{
+      width: 0.875rem;
+      height: 0.875rem;
+      background: url("../img/delate@2x.png") 0 0 no-repeat;
+      background-size: 0.875rem 0.875rem;
+      right: 0.969rem;
+      bottom: 0.563rem;
+    }
   }
-
-}*/
-
-p.nav2 + .main {
+  input#sou{
+    width: 3rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+}
+div.nav2 + .main {
   margin-top: @head+@nav2;
 }
 
@@ -220,6 +225,14 @@ p.nav2 + .main {
   background-color:transparent;
   padding: 0 1.281rem 1.125rem 1.281rem;
   color: #fff;
+  p{
+    height: @foot;
+    line-height: @foot;
+    text-align: left;
+    span{
+      position: static;
+    }
+  }
   input {
     width: 100%;
     height: 2.375rem;
@@ -232,29 +245,33 @@ p.nav2 + .main {
 .main {
   margin-top: @head;
   margin-bottom: @foot;
-  position: absolute;
+  width: 100%;
+}
+.main .minH{
+  height: 1000px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-}
-.main .container{
-  height: 500px;
 }
 .mainTop {
   font-size: 0.938rem;
   height: 2.068rem;
   line-height: 2.068rem;
+  .mainlf {
+    float: left;
+    text-align: left;
+    margin-left: 0.719rem;
+  }
+  .mainlm{
+    text-align: left;
+    margin: 0 auto;
+  }
+  .mainlr {
+    float: right;
+    text-align: right;
+    margin-right: 0.906rem;
+  }
   div {
     display: inline-block;
-    &:first-child {
-      float: left;
-      text-align: left;
-      margin-left: 0.719rem;
-    }
-    &:last-child {
-      float: right;
-      text-align: right;
-      margin-right: 0.906rem;
-    }
     label {
       display: inline-block;
     }
@@ -365,10 +382,34 @@ p.nav2 + .main {
     }
   }
 }
+
+
+/*自定义样式*/
+div[class^="content"]{
+  margin-top: 0.625rem;
+  text-align: left;
+  padding: 0 0.813rem 0 0.875rem;
+  background-color: #fff;
+}
+div[class^="content"][class$="_1"]{
+  .info{
+    &:not(:first-child){
+      border: none;
+    }
+  }
+}
+/* 2.438 边*/
 .info{
   border-bottom: 1px solid #f5f5f5;
   height: 2.438rem;
   line-height: 2.438rem;
+  font-size: 0.875rem;
+  color: #666;
+
+  &.head{
+    font-size: 0.938rem;
+    color: #333;
+  }
   input{
     float: right;
     width: 6.406rem;
@@ -382,8 +423,8 @@ p.nav2 + .main {
     margin-left: 1.094rem;
     color: #999;
   }
-
 }
+/*确定/取消 行样式*/
 .info2{
   height: auto;
   .btn{
@@ -409,12 +450,27 @@ span.bg1{
   margin-top: 0.75rem;
   transition: 1s ease;
 }
-/*span.bg2{
-  width: 0.875rem;
-  height: 0.5rem;
-  background: url("../img/") 0 0 no-repeat;
-  background-size:  0.875rem 0.5rem;
-}*/
+span.btext{
+  color: @blue;
+}
+span.gtext{
+  color: #666;
+}
+span.rtext{
+  color: #e415b1;
+}
+span.rztext{
+  color: #d82323;
+}
+span.greentext{
+  color:#1fe415;
+}
+span.ytext{
+  color: #e4ac15;
+}
+span.otext{
+  color: #fc811c;
+}
 /*手风琴*/
 .menu_container{
   text-align: left;
@@ -463,4 +519,39 @@ span.bg1{
       line-height: 1.6rem;
     }
   }
+}
+
+/*  tab  */
+/*tab内容*/
+.tab-head {
+  background-color: #fff;
+  margin: 0.188rem 0 0 0;
+  li {
+    height: 80/2px;
+    line-height: 80/2px;
+    font-size: 0.833rem;
+    &.active{
+      border-bottom: 1px solid @blue;
+      color: @blue;
+    }
+  }
+}
+.tab-content {
+  position: relative;
+  height: 10px;
+}
+.tabItem {
+  .content_1:last-child{
+    margin-bottom: @foot;
+  }
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+.curren {
+  opacity: 1 !important;
+  z-index: 20;
+  //width: 100% !important;
 }

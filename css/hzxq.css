@@ -1,0 +1,22 @@
+.mainTop {
+  font-size: 0.688rem;
+}
+.footer {
+  padding: 0;
+}
+.footer .foot1 div {
+  padding: 0;
+  font-size: 1rem;
+}
+.footer .paycon {
+  padding-left: 1rem;
+  background-color: #FFF;
+}
+.footer .paybt {
+  text-align: center;
+  background-color: #fc811c;
+}
+.footer .paybt a {
+  color: #fff;
+}
+(node:17484) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

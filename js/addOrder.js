@@ -2,7 +2,7 @@
  * Created by Amh on 2018-08-29.
  */
 /*点击添加尺寸*/
-$('.addSize').on('click','a',function(){
+$('.addSize').on('click','a,.addIcon',function(){
   //console.log('1');
   $icon=$('.addIcon');
   $icon .toggleClass('active');
@@ -46,22 +46,6 @@ function checkSubmitRequired(){
   return result;
 }*/
 
-/*手风琴效果 */
-$(function(){
-  $(".menu_title").click(function(){
-    $this=$(this);
-    var menu_c = $this.siblings(".menu_content");
-    if(menu_c.is(":hidden")){
-      menu_c.slideDown().parent("li").siblings().find(".menu_content").slideUp();
-      $this.children('span').addClass("active");
-      $this.parent("li").siblings().find(".menu_title>span").removeClass("active");
-    }else{
-      menu_c.slideUp();
-      $this.children('span').removeClass("active");
-    }
-  });
-});
-
 /*当键盘弹起时，底部"提交订单"一栏使用的是fixed bottom定位，会被键盘顶起*/
 var h=$(window).height();
 $(window).resize(function(){
@@ -73,4 +57,58 @@ $(window).resize(function(){
   }else{
     $('.footer').show();
   }
+});
+
+
+/*手风琴效果 */
+$(".menu_title").click(function(){
+  $this=$(this);
+  var menu_c = $this.siblings(".menu_content");
+  if(menu_c.is(":hidden")){
+    menu_c.slideDown().parent("li").siblings().find(".menu_content").slideUp();
+    $this.children('span').addClass("active");
+    $this.parent("li").siblings().find(".menu_title>span").removeClass("active");
+  }else{
+    menu_c.slideUp();
+    $this.children('span').removeClass("active");
+  }
+});
+
+/*名称modal*/
+$('#addZname').click(function(){
+  $modal=$("#addZn");
+  $modal.css("display","block");
+  $('body').css("position",'fixed');/*关闭模态框禁止底部页面滚动*/
+  $(document).on("touchend",'.cancel',function(e) {  // 取消删除事件抬起时
+    console.log('cancel');
+    $modal.css("display","none");
+    $('body').css("position",'static');/*关闭模态框禁止底部页面滚动*/
+
+  });
+  /*监听名称选择*/
+  var start_y;   // touchstart时的水平起始位置
+  var end_y;     // touchmove过程中的水平结束位置
+  var offset = 10;
+  $modal.on('touchstart','ul',function (e) {
+    // 手指触摸开始时记录一下手指所在的坐标x
+    start_y = e.originalEvent.touches[0].clientY;
+    //console.log("star:"+start_y);
+  });
+  $modal.on('touchmove','ul',function (e) {
+    // 目的是：记录手指离开屏幕一瞬间的位置 ，用move事件重复赋值
+    end_y = e.originalEvent.touches[0].clientY;
+  });
+  $modal.on("touchend",'ul',function(e) {
+    //console.log("end:"+end_y);
+    console.log("star:"+start_y);
+    var distance = Math.abs(start_y - end_y);
+    if (distance > offset){
+      //说明有方向的变化
+      console.log("huadong");
+    }else{
+      console.log(e.target.innerHTML);//获取到li>a的值 临时存储
+      //$modal.css("display","none");
+      //$('body').css("position",'static');/*关闭模态框禁止底部页面滚动*/
+    }
+  });
 });

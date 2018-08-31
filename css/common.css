@@ -62,13 +62,13 @@ i {
   font-style: normal;
 }
 ::-webkit-input-placeholder {
-  color: #999;
+  color: #d3d2d2;
 }
 ::-moz-placeholder {
-  color: #999;
+  color: #d3d2d2;
 }
 :-ms-input-placeholder {
-  color: #999;
+  color: #d3d2d2;
 }
 /*页面尺寸*/
 body {
@@ -85,24 +85,6 @@ body {
     font-size: 14px !important;
   }
 }
-/*@media screen and (min-width: 321px) and (max-width: 375px){
-  html{
-    font-size: 13px !important;
-  }
-  body {
-    background-color: #f5f5f5;//背景色
-    font-size: 13px !important;
-  }
-}
-@media screen and (min-width: 376px) and (max-width: 420px){
-  html{
-    font-size: 15px !important;
-  }
-  body {
-    background-color: #f5f5f5;//背景色
-    font-size: 15px !important;
-  }
-}*/
 .container {
   text-align: center;
   margin: 0 auto;
@@ -168,41 +150,63 @@ p span {
   width: 100%;
 }
 /*二级头部固定*/
-/*p.nav2 {
+div.nav2 {
   position: fixed;
-  top: @head;
+  top: 2.968rem;
   width: 100%;
-  height: @nav2;
-  line-height: @nav2;
-  margin-bottom: @nav2;
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  font-size: 0.833rem;
-  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #084ba7;
+  font-size: 1.063rem;
+  text-align: left;
   z-index: 999;
-
-  a {
-    width: 100%;
-    display: block;
-  }
-  span {
-    width: 16/2px;
-    height: 32/2px;
-    background: url("../img/返回@2x.png") 0 0 no-repeat;
-    background-size: 16/2px 32/2px;
-    top: 12px;
-    left: 12px;
-  }
-  b {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    display: inline-block;
-  }
-
-}*/
-p.nav2 + .main {
-  margin-top: 42.968rem;
+}
+div.nav2 input {
+  height: 2rem;
+  line-height: 2rem;
+}
+div.nav2 div.search {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  margin-left: 2.156rem;
+  width: 70%;
+}
+div.nav2 div.search input#kw {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 1rem;
+  border: solid 1px #5394ec;
+  padding-left: 2.781rem;
+  font-size: 0.875rem;
+}
+div.nav2 div.search span {
+  position: absolute;
+}
+div.nav2 div.search .searchIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url("../img/surch@2x.png") 0 0 no-repeat;
+  background-size: 1.125rem 1.125rem;
+  left: 0.844rem;
+  bottom: 0.438rem;
+}
+div.nav2 div.search .cltIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+  background: url("../img/delate@2x.png") 0 0 no-repeat;
+  background-size: 0.875rem 0.875rem;
+  right: 0.969rem;
+  bottom: 0.563rem;
+}
+div.nav2 input#sou {
+  width: 3rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+div.nav2 + .main {
+  margin-top: 5.968rem;
 }
 /*底部*/
 .footer {
@@ -212,6 +216,14 @@ p.nav2 + .main {
   background-color: transparent;
   padding: 0 1.281rem 1.125rem 1.281rem;
   color: #fff;
+}
+.footer p {
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: left;
+}
+.footer p span {
+  position: static;
 }
 .footer input {
   width: 100%;
@@ -223,30 +235,34 @@ p.nav2 + .main {
 .main {
   margin-top: 2.968rem;
   margin-bottom: 3.5rem;
-  position: absolute;
+  width: 100%;
+}
+.main .minH {
+  height: 1000px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-}
-.main .container {
-  height: 500px;
 }
 .mainTop {
   font-size: 0.938rem;
   height: 2.068rem;
   line-height: 2.068rem;
 }
-.mainTop div {
-  display: inline-block;
-}
-.mainTop div:first-child {
+.mainTop .mainlf {
   float: left;
   text-align: left;
   margin-left: 0.719rem;
 }
-.mainTop div:last-child {
+.mainTop .mainlm {
+  text-align: left;
+  margin: 0 auto;
+}
+.mainTop .mainlr {
   float: right;
   text-align: right;
   margin-right: 0.906rem;
+}
+.mainTop div {
+  display: inline-block;
 }
 .mainTop div label {
   display: inline-block;
@@ -351,10 +367,27 @@ p.nav2 + .main {
 .sizeMes div[class="info"]:last-child {
   border: none;
 }
+/*自定义样式*/
+div[class^="content"] {
+  margin-top: 0.625rem;
+  text-align: left;
+  padding: 0 0.813rem 0 0.875rem;
+  background-color: #fff;
+}
+div[class^="content"][class$="_1"] .info:not(:first-child) {
+  border: none;
+}
+/* 2.438 边*/
 .info {
   border-bottom: 1px solid #f5f5f5;
   height: 2.438rem;
   line-height: 2.438rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+.info.head {
+  font-size: 0.938rem;
+  color: #333;
 }
 .info input {
   float: right;
@@ -369,6 +402,7 @@ p.nav2 + .main {
   margin-left: 1.094rem;
   color: #999;
 }
+/*确定/取消 行样式*/
 .info2 {
   height: auto;
 }
@@ -395,12 +429,27 @@ span.bg1 {
   margin-top: 0.75rem;
   transition: 1s ease;
 }
-/*span.bg2{
-  width: 0.875rem;
-  height: 0.5rem;
-  background: url("../img/") 0 0 no-repeat;
-  background-size:  0.875rem 0.5rem;
-}*/
+span.btext {
+  color: #156de4;
+}
+span.gtext {
+  color: #666;
+}
+span.rtext {
+  color: #e415b1;
+}
+span.rztext {
+  color: #d82323;
+}
+span.greentext {
+  color: #1fe415;
+}
+span.ytext {
+  color: #e4ac15;
+}
+span.otext {
+  color: #fc811c;
+}
 /*手风琴*/
 .menu_container {
   text-align: left;
@@ -450,4 +499,37 @@ span.bg1 {
   height: 1.6rem;
   line-height: 1.6rem;
 }
-(node:13680) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+/*  tab  */
+/*tab内容*/
+.tab-head {
+  background-color: #fff;
+  margin: 0.188rem 0 0 0;
+}
+.tab-head li {
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.833rem;
+}
+.tab-head li.active {
+  border-bottom: 1px solid #156de4;
+  color: #156de4;
+}
+.tab-content {
+  position: relative;
+  height: 10px;
+}
+.tabItem {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+.tabItem .content_1:last-child {
+  margin-bottom: 3.5rem;
+}
+.curren {
+  opacity: 1 !important;
+  z-index: 20;
+}
+(node:14560) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.

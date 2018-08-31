@@ -1,0 +1,35 @@
+.bannerP {
+  margin-top: 2.968rem;
+  position: relative;
+}
+.bannerP img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.bannerP .user {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+  text-align: center;
+}
+.bannerP .user img,
+.bannerP .user span {
+  display: block;
+}
+.bannerP .user img {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0 auto;
+}
+.bannerP .user span {
+  color: #fff;
+  margin-top: 1.068rem;
+  font-size: 1.125rem;
+}
+.bannerP .nav2 {
+  position: absolute;
+  background-color: transparent;
+  top: 72%;
+}
+(node:14968) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
