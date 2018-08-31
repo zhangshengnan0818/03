@@ -87,5 +87,7 @@
   color: #333;
   padding: 0;
   direction: rtl;
+  height: 2.438rem;
+  line-height: 2.438rem;
 }
-(node:19636) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:7384) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
