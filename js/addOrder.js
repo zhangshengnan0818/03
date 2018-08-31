@@ -54,7 +54,7 @@ $(window).resize(function(){
   }else{
     $('.footer').show();
   }
-  if(document.activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA'){
+  if(document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA'){
     setTimeout(() => {
       document.activeElement.scrollIntoView({behavior: "smooth"});
     }, 100)
