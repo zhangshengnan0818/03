@@ -47,7 +47,7 @@ function checkSubmitRequired(){
 }*/
 
 /*当键盘弹起时，底部"提交订单"一栏使用的是fixed bottom定位，会被键盘顶起*/
-$('input').bind('focus',function(){
+$('input,textarea').bind('focus',function(){
   $('.footer').css('position','static');
   //或者$('#viewport').height($(window).height()+'px');
 }).bind('blur',function(){
