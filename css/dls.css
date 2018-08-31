@@ -32,4 +32,7 @@
   background-color: transparent;
   top: 72%;
 }
-(node:13416) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+.main {
+  margin-top: 0;
+}
+(node:18624) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
