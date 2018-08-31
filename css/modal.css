@@ -80,4 +80,4 @@
 .modalFoot a:first-child {
   border-right: 1px solid #f5f5f5;
 }
-(node:1768) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:4464) [DEP0026] DeprecationWarning: util.print is deprecated. Use console.log instead.
