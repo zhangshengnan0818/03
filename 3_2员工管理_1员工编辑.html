@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/yuangongxx.css">
+</head>
+<body>
+<div class="main">
+  <div class="container">
+    <div class="content1_2">
+      <div class="info2">
+        <a href="#" id="headPic">
+          头像
+          <span class="fr bg2"></span>
+          <span class="img"><img src="" alt=""/></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="content1_2">
+      <div class="info head">
+        <a href="3_2员工管理_1.1员工姓名.html">
+          姓名
+          <span class="fr bg2"></span>
+          <span class="blan">李晓峰</span>
+        </a>
+
+      </div>
+      <div class="info head">
+        <a href="3_2员工管理_1.2员工性别.html">
+          性别
+          <span class="fr bg2"></span>
+          <span class="blan fr">男</span>
+        </a>
+
+      </div>
+      <div class="info head">
+        <a href="3_2员工管理_1.3员工电话.html">
+          电话
+          <span class="fr bg2"></span>
+          <span class="blan">1350001234</span>
+        </a>
+
+      </div>
+      <div class="info head">
+        职位
+        <span class="blan">店长</span>
+      </div>
+    </div>
+    <div class="content2">
+      <div class="info head">
+        服务
+      </div>
+    </div>
+    <div class='checkbox'>
+      <input type='checkbox' id='1' name='checkboox[]' checked>
+      <label for='1'>剪发</label>
+    </div>
+    <div class='checkbox'>
+      <input type='checkbox' id='2' name='checkboox[]'>
+      <label for='2'>染烫</label>
+    </div>
+    <div class='checkbox'>
+      <input type='checkbox' id='hl1' name='checkboox[]'>
+      <label for='hl1'>护理</label>
+    </div>
+    <div class='checkbox'>
+      <input type='checkbox' id='3' name='checkboox[]'>
+      <label for='3'>护理</label>
+    </div>
+    <div class='checkbox'>
+      <input type='checkbox' id='4' name='checkboox[]'>
+      <label for='4'>其他</label>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <a href="#" class="btn"><img src="img/返回@2x.png" alt=""/></a>
+    <a href="#" class="btn"><img src="img/前进@2x.png" alt=""/></a>
+  </div>
+
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  headPic.addEventListener('click', function(){
+    modalPic.style.display = "block";
+  });
+  cancelP.addEventListener('click', function(){
+    modalPic.style.display = "none";
+  });
+</script>
+<!--<script>
+  $(function () {
+    // 单击“用户登录”弹出登录模态框
+    headPic.onclick = function (e) {
+      e.preventDefault();
+      modalPic.className = "modal show";
+      /*$("#modalPic").on('touchend', function (e) {
+       if(!$(e.target).is($('#modelcontent'))){
+       $('#modalPic').removeClass('show');
+       }
+       });*/
+    };
+    // 点击任意位置关闭登录模态框
+    $(document).on('touchend', function (e) {
+      console.dir($(e.target));
+      if($(e.target).is("#close")||$(e.target).is("#modelcontent")){
+        $('#modalPic').removeClass('show');
+      }
+    });
+  });
+</script>-->
+<!--<script src="js/bootstrap.js"></script>-->
+<!--<script>-->
+<!--(function () {-->
+<!--var s = document.createElement("script");-->
+<!--s.onload = function () {-->
+<!--bootlint.showLintReportForCurrentDocument([]);-->
+<!--};-->
+<!--s.src = "js/bootlint.js";//路径-->
+<!--document.body.appendChild(s)-->
+<!--})();-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,92 @@
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.modalDialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modalContent {
+  position: relative;
+  width: 80%;
+  height: 3.51575rem;
+  margin: 0 auto;
+  margin-top: 50%;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 1px rgba(238, 238, 238, 0.25);
+  box-shadow: 0 10px 1px rgba(238, 238, 238, 0.25);
+  background-clip: padding-box;
+  outline: 0;
+}
+.modalHead,
+.modalFoot {
+  height: 1.594rem;
+  line-height: 1.594rem;
+}
+.modalHead span a {
+  width: 100%;
+  height: 1.594rem;
+  line-height: 1.594rem;
+  font-size: 0.469rem;
+  color: #333333;
+}
+.modalHead span a.dis {
+  color: #999;
+}
+.modalHead .name {
+  color: #333333;
+  font-size: 0.5315rem;
+}
+.modalHead .back {
+  float: left;
+  margin-left: 0.625rem;
+}
+.modalHead .cancel {
+  float: right;
+  margin-right: 0.719rem;
+}
+.modalBody {
+  height: 5.25rem;
+  border-top: 1px solid #f5f5f5;
+  text-align: center;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.modalBody ul li a {
+  height: 1.125rem;
+  line-height: 0.625rem;
+  display: inline-block;
+  width: 100%;
+  padding-top: 0.5rem;
+  font-size: 0.469rem;
+}
+.modalFoot a {
+  display: inline-block;
+  width: 110px;
+  text-align: center;
+}
+.modalFoot a:first-child {
+  border-right: 1px solid #f5f5f5;
+}
+#ttype {
+  float: right;
+  background: none;
+  text-align: right;
+  color: #333;
+  padding: 0;
+  direction: rtl;
+  height: 1.219rem;
+  line-height: 1.219rem;
+}

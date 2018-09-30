@@ -99,9 +99,8 @@ $('#addZname').click(function(){
   $modal.css("display","block");
   $('body').css("position",'fixed');/*关闭模态框禁止底部页面滚动*/
   $(document).on("touchend",'.cancel',function(e) {  // 取消删除事件抬起时
-    console.log('cancel');
-    $modal.css("display","none");
-    $('body').css("position",'static');/*关闭模态框禁止底部页面滚动*/
+    $('#addZn').css("display","none");
+    $('body').css("position",'static');
 
   });
   /*监听名称选择*/
@@ -131,3 +130,7 @@ $('#addZname').click(function(){
     }
   });
 });
+function clcModal(){
+  $('#addZn').css("display","none");
+  $('body').css("position",'static');
+}
